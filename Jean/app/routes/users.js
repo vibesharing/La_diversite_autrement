@@ -37,7 +37,7 @@ app.post('/checkReponse', function(req, res){
     return;
   }
   if(x[req.body.id].reponse == req.body.reponse){
-    User.addpoint();
+    User.addpoint(req, res);
     res.send(true);
   }
   else {

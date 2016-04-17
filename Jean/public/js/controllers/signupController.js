@@ -3,8 +3,9 @@ function signupController($scope, $location, $timeout, userService) {
     $scope.username = "";
     $scope.signupMessage = {};
     $scope.signupMessage.title = "";
-    
+
     $scope.signup = function() {
+        $scope.user.points= 0;
         userService.create($scope.user).then(function (res) {
             $scope.username = res.data.username;
             $timeout(function(){ $location.path('/'); }, 2000);

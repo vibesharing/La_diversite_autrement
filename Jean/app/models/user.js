@@ -19,30 +19,22 @@ var userSchema = new mongoose.Schema({
 var User = {
   model: mongoose.model('User', userSchema),
   //
-  addpoint: function() {
-    User.model.update({
-      _id: req.params.id
-    },{
-      points: user.points + 10},
-      req.body, function(err, user) {
-      console.log(user);
-      if (err)
-        res.status(500).send(err.message);
-      res.json(user);
-    });
-    // if (req.headers.authorization) {
-    //   jwt.verify(req.headers.authorization, 'tokenSecret', function(err, decoded) {
-    //     User.model.findOne({
-    //       _id: decoded._doc._id
-    //     }, function(err, user) {
-    //       User.model.update({
-    //         _id: user._id
-    //       }, {
-    //         points: user.points + 10
-    //       });
-    //     });
-    //   });
-    // }
+  addpoint: function(req, res) {
+
+    if (req.headers.authorization) {
+      jwt.verify(req.headers.authorization, 'tokenSecret', function(err, decoded) {
+        User.model.findOne({
+          _id: decoded._doc._id
+        }, function(err, u) {
+          u.points +=10;
+          User.model.update({
+            _id: u._id
+          }, u, function() {
+
+          });
+        });
+      });
+    }
   },
 
 
