@@ -1,0 +1,28 @@
+<div class="col-md-4 col-md-offset-4" id="signup">
+  <div class="bs-callout bs-callout-danger" ng-show="(loginMessage.title != '')">
+  <h4>{{loginMessage.title}}</h4>
+  <p>{{loginMessage.message}}</p>
+  </div>
+  <form name="formConnect">
+    <h1>BIENVENU(E)S SUR <span style="color: #529FB9">H</span>WORLD</h1>
+    <h4>L’exposition interactive qui va vous faire découvrir les dernières innovations qui vont changer le monde du handicap.<br><br>
+Enregistrez vous pour tenter de gagner les lots de la Mission Handicap !</h4>
+<br>
+    <div class="form-group">
+      <input type="text" class="form-control" id="inputName"
+      placeholder="Nom Prénom" ng-model="user.name" ng-required="true">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="inputPass"
+      placeholder="nomprénom@entreprise.com" ng-model="user.password" ng-required="true">
+    </div>
+    <button type="submit" class="btn btn-signup  col-md-offset-4 col-md-4"
+    ng-disabled="formConnect.$invalid" ng-click="connect()">Jouer</button>
+  </form>
+</div>
+<div class="row sub-login-form">
+  <div class="col-md-offset-4 col-md-2">
+    <a href="#/signup">Créer un compte</a>
+  </div>
+
+</div>

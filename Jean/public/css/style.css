@@ -1,5 +1,7 @@
 body{
     padding-top: 70px;
+    background-color: #529FB9;
+
 }
 .navbar-border{
 	border-bottom: 3px solid #F0DB4F;
@@ -9,4 +11,52 @@ body{
 }
 .navbar-header img:hover{
 	transform: rotate(360deg);
-}  
+}
+/* =========================================Sign up==== */
+#signup{
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  height: 80vh;
+}
+.form-control{
+  background-color: #EDEDED;
+  border: 1px solid #529FB9;
+  border-radius: 0px;
+
+}
+.btn-signup {
+  background-color: #EDEDED;
+  border: 1px solid #529FB9;
+  border-radius: 0px;
+  color: #529FB9;
+  font-size: 30px;
+}
+/* =========================================Modal==== */
+.modal-header{
+  text-align: center;
+  font-size: 20px;
+}
+.modal-title{
+
+}
+.modal-body{
+  text-align: center;
+  background-color: #EDEDED;
+  height: 70vh;
+
+}
+.block-answer{
+  height: 10vh;
+  background-color: #529FB9;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  white-space: normal;
+}
+.bravo{
+  color: green;
+}
+.faux{
+  color: red;
+}

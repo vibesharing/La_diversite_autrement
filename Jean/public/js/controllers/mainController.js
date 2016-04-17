@@ -1,12 +1,15 @@
 // MAIN CONTROLLER
-function mainController($scope, $http, todoService) {
+function mainController($scope, $http, todoService, userService, $rootScope) {
 	$scope.title = "Todo List";
-	
+
 	function load(){
 		todoService.get().then(function(res){
 			$scope.todos = res.data;
 		});
 	}
+		userService.get().then(function(res){
+		$rootScope.user = res.data;
+	});
 	$scope.add = function(){
 		var data = {};
 		data.description = $scope.description;
