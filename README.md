@@ -6,7 +6,7 @@
 Objectives | Success & Inputs
 ------------ | -------------
 Create a web app as a game | quizz
-Have a Svg picture on which you can click| the map was the game board with different continent.
+Have a Svg picture on which you can click| the map was the game's board with different continent.
 Work from a Wireframe from a client |  Integrating component thought by the client and presented in a PPT
 Play with the Back | The validity of an answer was checked in the Back and not in the front to hide the answer from potential spies..
 Learn more about Angular 1.5| Controllers / Services / Routes
